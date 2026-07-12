@@ -1,0 +1,40 @@
+:root{
+--bg:#0b0f14; --panel:#121926; --muted:#1b2433; --text:#e6edf3; --sub:#96a3b1;
+--primary:#00d6b9; --primary-2:#11b3a8; --danger:#ff6464; --accent:#5b8cff;
+--shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#0b0f14,#0e131b);color:var(--text);font:15px/1.6 system-ui,Segoe UI,Roboto}
+.sidebar{position:fixed;inset:0 auto 0 0;width:260px;background:linear-gradient(180deg,var(--panel),#0e1624);border-right:1px solid #141b29;box-shadow:var(--shadow)}
+.logo{margin:22px 20px;font-weight:800;letter-spacing:.5px;color:#fff}
+.sidebar a{display:block;color:#c8d2df;text-decoration:none;padding:12px 20px;border-left:3px solid transparent}
+.sidebar a:hover{background:var(--muted);border-left-color:var(--primary);color:#fff}
+.content{margin-left:260px;padding:36px}
+h1,h2{margin:6px 0 16px}
+
+
+/* Cards / panels */
+form, .card{background:rgba(255,255,255,.02);backdrop-filter:saturate(120%) blur(6px);border:1px solid #1a2231;border-radius:14px;box-shadow:var(--shadow);padding:18px;max-width:720px}
+label{display:block;margin:10px 0 6px;color:#c9d5e3}
+input,select,button{font:inherit}
+input[type=text],input[type=number],input[type=date]{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #223046;background:#0f1623;color:#e6edf3;outline:none}
+input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(0,214,185,.15)}
+button{cursor:pointer;border:none;padding:12px 16px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#001717;font-weight:700;transition:.2s}
+button:hover{transform:translateY(-1px);filter:saturate(110%)}
+button.del{background:linear-gradient(135deg,#f87171,#ef4444);color:#1a0b0b}
+
+
+/* Table */
+#medicineTable{width:100%;border-collapse:separate;border-spacing:0 10px}
+#medicineTable thead th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#9fb0c6;padding:8px 10px}
+#medicineTable tbody tr{background:#0e1624;border:1px solid #1f2a3d}
+#medicineTable td{padding:12px 10px}
+#medicineTable td[contenteditable=true]{outline:0;border-bottom:1px dashed #2a3b55}
+
+
+/* Search */
+#searchBox{width:320px;margin:0 0 16px 0}
+
+
+/* Utilities */
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#122036;color:#b8c6d8;border:1px solid #1e2a42}
